@@ -79,14 +79,14 @@ type GetVulnerabilitiesAdditionOK struct {
 	 */
 	ContentType string
 
-	Payload string
+	Payload map[string]models.Report
 }
 
 func (o *GetVulnerabilitiesAdditionOK) Error() string {
 	return fmt.Sprintf("[GET /projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/additions/vulnerabilities][%d] getVulnerabilitiesAdditionOK  %+v", 200, o.Payload)
 }
 
-func (o *GetVulnerabilitiesAdditionOK) GetPayload() string {
+func (o *GetVulnerabilitiesAdditionOK) GetPayload() map[string]models.Report {
 	return o.Payload
 }
 
